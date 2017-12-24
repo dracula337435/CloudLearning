@@ -1,13 +1,16 @@
 
-// plugins应该放前边，不然报错
-plugins {
-    id "org.jetbrains.kotlin.jvm" version "1.2.10"
-}
-
 subprojects{
 
     apply plugin: 'java'
     apply plugin: 'idea'
+
+    repositories {
+        maven {
+            //如果目录中木有，则找url对应的maven仓库，下面是阿里的maven仓库，速度杠杆的。
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
+        mavenCentral()    //如果都木有，则取maven的官方仓库吧，只是这个速度要看人品
+    }
 
     //设置jdk的版本
     sourceCompatibility = 1.8
@@ -20,17 +23,4 @@ subprojects{
         testCompile("org.jetbrains.kotlin:kotlin-test-junit")
     }
 
-}
-
-repositories {
-    maven {
-        //如果目录中木有，则找url对应的maven仓库，下面是阿里的maven仓库，速度杠杆的。
-        url "http://maven.aliyun.com/nexus/content/groups/public/"
-    }
-    mavenCentral()    //如果都木有，则取maven的官方仓库吧，只是这个速度要看人品
-}
-
-sourceSets {
-    main.kotlin.srcDirs += 'src/main/kotlin'
-    main.java.srcDirs += 'src/main/java'
 }

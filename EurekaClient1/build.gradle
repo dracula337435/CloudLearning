@@ -11,19 +11,10 @@ buildscript {
 
 // plugins应该放前边，不然报错
 plugins {
-//    id "org.jetbrains.kotlin.jvm" version "1.2.10"
-    id "org.jetbrains.kotlin.jvm"
+    id "org.jetbrains.kotlin.jvm" version "1.2.10"
 }
 
 apply plugin: 'org.springframework.boot'
-
-repositories {
-    maven {
-        //如果目录中木有，则找url对应的maven仓库，下面是阿里的maven仓库，速度杠杆的。
-        url "http://maven.aliyun.com/nexus/content/groups/public/"
-    }
-    mavenCentral()    //如果都木有，则取maven的官方仓库吧，只是这个速度要看人品
-}
 
 //jar {   //当然若是我们将此jar包提交给别人使用而不是运行，则当删除或者注释掉此 jar 部分
 //    manifest { //配置 Manifest文档属性
