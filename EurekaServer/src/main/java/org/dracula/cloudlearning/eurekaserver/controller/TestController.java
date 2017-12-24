@@ -1,6 +1,6 @@
-package org.dracula.cloud.controller;
+package org.dracula.cloudlearning.eurekaserver.controller;
 
-import org.dracula.cloud.vo.CommonVO;
+import org.dracula.cloudlearning.eurekaserver.vo.CommonVO;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;

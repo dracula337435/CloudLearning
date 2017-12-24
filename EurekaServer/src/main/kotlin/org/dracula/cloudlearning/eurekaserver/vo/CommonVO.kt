@@ -1,4 +1,4 @@
-package org.dracula.cloud.vo
+package org.dracula.cloudlearning.eurekaserver.vo
 
 class CommonVO<DataType>{
 
