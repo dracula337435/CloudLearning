@@ -11,7 +11,8 @@ buildscript {
 
 // plugins应该放前边，不然报错
 plugins {
-    id "org.jetbrains.kotlin.jvm" version "1.2.10"
+//    id "org.jetbrains.kotlin.jvm" version "1.2.10"
+    id "org.jetbrains.kotlin.jvm"
 }
 
 apply plugin: 'java'
