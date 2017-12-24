@@ -15,8 +15,6 @@ plugins {
     id "org.jetbrains.kotlin.jvm"
 }
 
-apply plugin: 'java'
-apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
 repositories {
@@ -38,10 +36,6 @@ repositories {
 //        println 'hello world!'
 //    }
 //}
-
-//设置jdk的版本
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
 
 dependencyManagement {
     imports {

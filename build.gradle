@@ -4,8 +4,16 @@ plugins {
     id "org.jetbrains.kotlin.jvm" version "1.2.10"
 }
 
-apply plugin: 'java'
-apply plugin: 'idea'
+subprojects{
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    //设置jdk的版本
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+}
 
 repositories {
     maven {
@@ -14,10 +22,6 @@ repositories {
     }
     mavenCentral()    //如果都木有，则取maven的官方仓库吧，只是这个速度要看人品
 }
-
-//设置jdk的版本
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
