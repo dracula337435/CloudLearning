@@ -13,6 +13,13 @@ subprojects{
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
 
+    dependencies {
+        compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+        compile("org.jetbrains.kotlin:kotlin-reflect")
+        testCompile("org.jetbrains.kotlin:kotlin-test")
+        testCompile("org.jetbrains.kotlin:kotlin-test-junit")
+    }
+
 }
 
 repositories {
@@ -21,13 +28,6 @@ repositories {
         url "http://maven.aliyun.com/nexus/content/groups/public/"
     }
     mavenCentral()    //如果都木有，则取maven的官方仓库吧，只是这个速度要看人品
-}
-
-dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    compile("org.jetbrains.kotlin:kotlin-reflect")
-    testCompile("org.jetbrains.kotlin:kotlin-test")
-    testCompile("org.jetbrains.kotlin:kotlin-test-junit")
 }
 
 sourceSets {
