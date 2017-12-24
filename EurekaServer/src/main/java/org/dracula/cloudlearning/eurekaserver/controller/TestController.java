@@ -1,6 +1,7 @@
 package org.dracula.cloudlearning.eurekaserver.controller;
 
 import org.dracula.cloudlearning.eurekaserver.vo.CommonVO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,4 +18,19 @@ public class TestController {
         return rslt;
     }
 
+    @Value("${application}")
+    private String application;
+
+    @RequestMapping(value="/testConfig", method=RequestMethod.GET)
+    public String testConfig(){
+        return application;
+    }
+
+    public String getApplication() {
+        return application;
+    }
+
+    public void setApplication(String application) {
+        this.application = application;
+    }
 }
