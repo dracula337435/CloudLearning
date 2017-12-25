@@ -28,4 +28,6 @@ config 配置服务器
 
 * gradle
 * spring-boot
-* spring-cloud
+* spring-cloud  
+eureka server & client  
+config server & client
