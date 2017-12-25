@@ -38,5 +38,5 @@ config 配置服务器
 * spring-boot
 * spring-cloud  
 eureka server & client  
-config server & client
-* zuul gateway
+config server & client  
+zuul gateway  
