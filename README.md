@@ -7,6 +7,7 @@
 Eureka Server 注册中心  
 目前使用9080端口  
 测试链接[http://localhost:9080/test](http://localhost:9080/test)  
+测试配置中心链接[http://localhost:9080/testConfig](http://localhost:9080/testConfig)返回配置中“application”的值  
 
 ### EurekaClient1
 Eureka Client 服务提供者  
