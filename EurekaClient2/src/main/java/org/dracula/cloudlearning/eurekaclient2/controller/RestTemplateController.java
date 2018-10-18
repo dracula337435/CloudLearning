@@ -17,7 +17,7 @@ public class RestTemplateController {
     @RequestMapping("/restTemplate2to1")
     public String test(){
         return "经过Client2的RestTemplate加工："
-                +restTemplate.getForEntity("http://client1/testClient1", String.class).getBody();
+                +restTemplate.getForEntity("http://EurekaClient1/testClient1", String.class).getBody();
     }
 
     @Configuration

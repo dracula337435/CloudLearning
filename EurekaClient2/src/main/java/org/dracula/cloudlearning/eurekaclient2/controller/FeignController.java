@@ -18,7 +18,7 @@ public class FeignController {
                 +client1.testClient1();
     }
 
-    @FeignClient(name="client1")
+    @FeignClient(name="EurekaClient1")
     public interface Client1{
 
         @RequestMapping(value="/testClient1", method=RequestMethod.GET)
