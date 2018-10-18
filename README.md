@@ -1,6 +1,13 @@
 # CloudLearning
 主要是学习spring-cloud
 
+## 启动顺序
+1. ConfigServer  
+1. EurekaServer  
+1. EurekaClient1  
+1. EurekaClient2  
+1. ZuulGateway  
+
 ## 各模块
 
 ### EurekaServer
