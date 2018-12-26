@@ -2,12 +2,14 @@
 subprojects{
 
     buildscript {
+        ext {
+            springBootVersion = '2.0.5.RELEASE'
+        }
         repositories {
-            mavenCentral()//依赖Maven仓库
+            mavenCentral()
         }
         dependencies {
-            //使用1.4.2.RELEASE版本的Spring框架
-            classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
+            classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
         }
     }
 
