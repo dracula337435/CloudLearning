@@ -5,6 +5,15 @@ server:
 spring:
   application:
     name: EurekaServer
+#for actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
 #
 eureka:
   client:
