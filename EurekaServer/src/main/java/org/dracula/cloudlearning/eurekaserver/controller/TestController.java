@@ -1,7 +1,10 @@
 package org.dracula.cloudlearning.eurekaserver.controller;
 
+import org.dracula.cloudlearning.eurekaserver.SomeConfigurationProperties;
 import org.dracula.cloudlearning.eurekaserver.vo.CommonVO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,5 +35,13 @@ public class TestController {
 
     public void setApplication(String application) {
         this.application = application;
+    }
+
+    @Autowired
+    private SomeConfigurationProperties someConfigurationProperties;
+
+    @GetMapping("/testConfigurationProperties")
+    public SomeConfigurationProperties testConfigurationProperties(){
+        return someConfigurationProperties;
     }
 }
