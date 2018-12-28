@@ -4,9 +4,7 @@
 ## 启动顺序
 1. ConfigServer  
 1. EurekaServer  
-1. EurekaClient1  
-1. EurekaClient2  
-1. ZuulGateway  
+1. EurekaClient1或EurekaClient2或ZuulGateway   
 
 ## 各模块
 
@@ -20,13 +18,14 @@ Eureka Server 注册中心
 ### EurekaClient1
 Eureka Client 服务提供者  
 目前使用9081端口  
-测试链接[http://localhost:9081/testClient1](http://localhost:9081/testClient1)  
+测试链接[http://localhost:9081/testClient1](http://localhost:9081/testClient1)，随机等待0-4秒再返回  
 
 ### EurekaClient2
 Eureka Client 服务使用者  
 目前使用9082端口  
 测试链接（使用RestTemplate）[http://localhost:9082/restTemplate2to1](http://localhost:9082/restTemplate2to1)  
 测试链接（使用Feign）[http://localhost:9082/feign2to1](http://localhost:9082/feign2to1)  
+经过hystrix的，[http://localhost:9082/testCircuitBreaker2To1](http://localhost:9082/testCircuitBreaker2To1)  
 
 ### ConfigServer
 config 配置服务器  
@@ -49,3 +48,5 @@ config 配置服务器
 eureka server & client  
 config server & client  
 zuul gateway  
+sleuth & zipkin
+hystrix
