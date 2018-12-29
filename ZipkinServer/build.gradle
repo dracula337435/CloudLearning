@@ -30,7 +30,7 @@ dependencies {
     compile("io.zipkin.java:zipkin-autoconfigure-ui:2.11.12")
     compile("org.springframework.cloud:spring-cloud-starter-zipkin")
     compile("org.springframework.cloud:spring-cloud-starter-sleuth")
-    compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+//    compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
